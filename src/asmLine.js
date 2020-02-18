@@ -5,7 +5,7 @@ import 'ag-grid/dist/styles/ag-theme-balham.css';
 import axios from "axios";
 
 
-class Home extends React.Component {
+class AssLine extends React.Component {
   constructor(props) {
     super(props);
   
@@ -88,26 +88,27 @@ class Home extends React.Component {
   render() {
     return (
       <div >
-        <h3 style={{marginLeft: "13%"}}>FIFO Room</h3>
-        <div className="HomeGrid">
-        <div style={{height: 350, width: '70%', marginTop: 10,marginLeft: "13%",fontSize:'13px'}} className="ag-theme-balham">
+        
+<h3 style={{marginLeft: "13%"}}>Assembly Line</h3>
+<div className="HomeGrid">
+            <div style={{height: 350, width: '70%', marginTop: 10,marginLeft: "13%",fontSize:'13px'}} className="ag-theme-balham">
                 <AgGridReact
-                    columnDefs={this.state.devicesColdef}
-                    rowData={this.state.devices}
+                    columnDefs={this.state.assetsColdef}
+                    rowData={this.state.assets}
                     enableFilter={true}
                     onGridReady={this.onGridReady}
                     headerHeight={30}
                     enableSorting={true}
                     animateRows={true}
                   //  enableColResize={true}
+                    
                     >
                 </AgGridReact>
-        </div>
-    </div>
-
+            </div>
+            </div>
     </div>
     );
   }
 }
 
-export default Home;
+export default AssLine;
